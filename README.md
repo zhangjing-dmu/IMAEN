@@ -1,5 +1,5 @@
-# JLAN: medical code prediction via joint learning attention networks and denoising mechanism
-The JLAN: medical code prediction via joint learning attention networks and denoising mechanism (JLAN) is built based on MultiResCNN and CAML. The repo can be used to reproduce the results in the [paper](https://link.springer.com/article/10.1186/s12859-021-04520-x):
+# IMAEN:interpretable molecular augmentation encoding networks for drug-target interaction prediction
+The IMAEN: medical code prediction via joint learning attention networks and denoising mechanism (JLAN) is built based on MultiResCNN and CAML. The repo can be used to reproduce the results in the [paper](https://link.springer.com/article/10.1186/s12859-021-04520-x):
 ## Overview
 In this paper, a new joint learning model is proposed to predict medical codes from clinical notes. On the MIMIC-III-50 dataset, 
 our model outperforms all the baselines and SOTA models in all quantitative metrics. On the MIMIC-III-full dataset, our model outperforms in the macro-F1, micro-F1, macro-AUC, and precision at eight compared to the most advanced models. In addition, after introducing the denoising mechanism, the convergence speed of the model becomes faster, and the loss of the model is reduced overall.
