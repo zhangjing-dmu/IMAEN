@@ -1,18 +1,21 @@
 # IMAEN:interpretable molecular augmentation encoding networks for drug-target interaction prediction
-The IMAEN: medical code prediction via joint learning attention networks and denoising mechanism (JLAN) is built based on MultiResCNN and CAML. The repo can be used to reproduce the results in the [paper](https://link.springer.com/article/10.1186/s12859-021-04520-x):
+The IMAEN: in this study, we propose an interpretable molecular augmentation encoding networks named IMAEN for drug-target interaction prediction, which employs molecular augmentation mechanism to fully aggregate the molecular node neighborhood information, especially for the nodes with fewer neighborhoods. The repo can be used to reproduce the results in our paper:
 ## Overview
-In this paper, a new joint learning model is proposed to predict medical codes from clinical notes. On the MIMIC-III-50 dataset, 
-our model outperforms all the baselines and SOTA models in all quantitative metrics. On the MIMIC-III-full dataset, our model outperforms in the macro-F1, micro-F1, macro-AUC, and precision at eight compared to the most advanced models. In addition, after introducing the denoising mechanism, the convergence speed of the model becomes faster, and the loss of the model is reduced overall.
+Drug discovery is a crucial aspect of biomedical research, and predicting drug-target interactions
+(DTIs) is a vital step in this process. Graph neural networks (GNNs) have achieved remarkable performance on graph learning tasks, including DTI prediction. However, existing DTI models using
+GNNs are insufficient to aggregate node neighborhood information and lack interpretability. In this
+study, we propose an interpretable molecular augmentation encoding networks named IMAEN for drug-target interaction prediction, which employs molecular augmentation mechanism to fully aggregate the molecular node neighborhood information, especially for the nodes with fewer neighborhoods. Moreover, we design an interpretable stack convolutional encoding module to process protein sequence from the perspective of multi-scale and multi-level interpretably. Our proposed model outperforms existing models and achieves state-of-the-art performance on four benchmark datasets. The visualization of the model and interpretation of its predictions provide valuable insights into the underlying mechanisms of drug-target interactions, which could assist researchers in narrowing the
+search space of binding sites and aid in the discovery of new drugs and targets.
 
 ## Setup
 The repo mainly requires the following packages.
-+ allennlp 0.9.1
-+ nltk 3.3
-+ python 3.6.12
-+ torch 1.7.0+cu110
-+ torchvision 0.8.1
-+ scikit-learn 0.20.0
-
++ torch==1.9.0
++ networkx==2.5.1
++ rdkit-pypi==2021.03.05
++ torch_geometric==2.0.1
++ torch_scatter==2.0.8
++ torch_sparse==0.6.12
++ torch_cluster==1.5.9
 Full packages are listed in requirements.txt.
 ## 1. Data preprocessing
 First, you should go to https://physionet.org/content/mimiciii/1.4/ to download the MIMIC-III dataset (You may need to get the certificate); After that, save the following clinical records into the data folder:
